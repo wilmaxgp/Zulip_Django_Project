@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register Bug</title>
+</head>
+<body>
+	<h1>Register a New Bug</h1>
+
+	<form method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+
+		<input type="submit" value="Register Bug">
+	</form>
+
+	<a href="{% url 'list_bugs' %}">Back to Bug List</a>
+</body>
+</html>
+
