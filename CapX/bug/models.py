@@ -4,7 +4,11 @@ from django.db import models
 
 class Bug(models.Model):
     description = models.TextField()
-    bug_type = models.CharField(max_length=100)
+    bug_type = models.CharField(max_length=100, choices=[
+            ('errror', 'Error')
+            ('new_feature', 'New_Feature'),
+            ('other', 'Other'),
+            ])
     report_date = models.DateField()
     status = models.CharField(max_length=20, choices=[
         ('TO DO', 'To Do'),
