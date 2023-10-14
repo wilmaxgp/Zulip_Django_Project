@@ -5,13 +5,15 @@ from django.db import models
 class Bug(models.Model):
     description = models.TextField()
     bug_type = models.CharField(max_length=100, choices=[
-            ('errror', 'Error')
-            ('new_feature', 'New_Feature'),
-            ('other', 'Other'),
+            ['errror', 'Error']
+            ['new_feature', 'New_Feature'],
+            ['other', 'Other'],
             ])
     report_date = models.DateField()
     status = models.CharField(max_length=20, choices=[
-        ('TO DO', 'To Do'),
-        ('IN PROGRESS', 'In Progress'),
-        ('DONE', 'Done'),
+        ['TO DO', 'To Do'],
+        ['IN PROGRESS', 'In Progress'],
+        ['DONE', 'Done'],
         ])
+    title = models.CharField(max_length=200)
+    description = models.TextField()

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View Bug Details</title>
+</head>
+<body>
+	<h1>Bug Details</h1>
+
+	<h2>{{ bug.title }}</h2>
+	<p><strong>Description:</strong> {{ bug.description }}</p>
+	<!-- Add more bug details here based on your model fields-->
+
+	<a href="{% url 'list_bugs' %}">Back to Bug List</a>
+</body>
+</html>
